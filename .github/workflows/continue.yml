@@ -1,4 +1,4 @@
-name: Website Deployment
+name: Website Deployment with continue
 on:
   push:
     branches:
@@ -35,7 +35,7 @@ jobs:
         run: npm ci
       - name: Test code
         continue-on-error: true
-        
+
         id: run-tests
         run: npm run test
       - name: Upload test report
